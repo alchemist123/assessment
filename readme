@@ -1,0 +1,17 @@
+STACK HOLDERS = admin,employee
+common apis
+=========
+1.login:- http://localhost:3000/auth/login (email,password)
+2.update password:- http://localhost:3000/auth/updatePassword (currentPassword,newPassword) pass jwt token in header
+
+admin API's
+===========
+1.Register: http://localhost:3000/auth/register (email,password,name)
+2.addEmployee : http://localhost:3000/admin/addEmployee (base) sent csv file as base64. and pass token in header
+3.getEmployee: http://localhost:3000/admin/getEmployee (token in header)
+4.deleteRecord: http://localhost:3000/admin/deleteRecord (userId) userId will get from the api getEmployee
+5.updateRecord: http://localhost:3000/admin/updateRecord (userId,email,joinDate,name) userId will get from the api getEmployee
+
+employee API's
+=============
+1.getEmployee: http://localhost:3000/admin/getEmployee (token in header)
