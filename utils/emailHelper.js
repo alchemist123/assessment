@@ -2,15 +2,14 @@ const nodemailer = require('nodemailer')
 
 module.exports={
     mailToClient:(to,sub,text)=>{
-        console.log("hey")
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         host: 'smtpout.secureserver.net',
         secureConnection: true,
         port: 465,
             auth: {
-              user: 'notifications@stemclass.online',
-              pass: 'StemClassNotificationMail@2021'
+              user: 'newdestiny2022high@gmail.com',
+              pass: process.env.PASS
             },
             tls: { rejectUnauthorized: false }
           });
