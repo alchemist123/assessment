@@ -5,6 +5,7 @@ require("dotenv").config();
 require("./utils/Init_MonoDB");
 const authRoute = require("./routers/auth.router");
 const adminRoute = require("./routers/admin.router");
+const employeeRoute=require("./routers/employeeRouter")
 const app = express();
 app.use(cors());
 app.use(morgan("dev"));
@@ -26,6 +27,7 @@ app.use(function (req, res, next) {
 const server = require('http').createServer(app);
 app.use("/auth", authRoute);
 app.use("/admin", adminRoute);
+app.use("/employee", employeeRoute);
 app.get("/", async (req, res) => {
   res.send("testing test");
 });
