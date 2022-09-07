@@ -14,4 +14,4 @@ admin API's
 
 employee API's
 =============
-1.getEmployee: http://localhost:3000/admin/getEmployee (token in header)
+1.getEmployee: http://localhost:3000/employee/getEmployee (token in header)
